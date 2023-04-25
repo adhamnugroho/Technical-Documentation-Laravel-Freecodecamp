@@ -76,9 +76,106 @@
             </code>
           </p>
           <p>
-            Once you have started the Artisan development server, your application will be accessible in your web browser at <code class="inline"> http://localhost:8000</code>. Next, you're ready to start taking your next steps into the
+            Once you have started the Artisan development server, your application will be accessible in your web browser at <code class="inline">http://localhost:8000</code>. Next, you're ready to start taking your next steps into the
             Laravel ecosystem. Of course, you may also want to configure a database.
           </p>
+        </section>
+        <section class="main-section" id="laravel-and-docker">
+          <header>
+            <h2>Laravel & Docker</h2>
+          </header>
+          <p>
+            We want it to be as easy as possible to get started with Laravel regardless of your preferred operating system. So, there are a variety of options for developing and running a Laravel project on your local machine. While you may
+            wish to explore these options at a later time, Laravel provides Sail, a built-in solution for running your Laravel project using Docker.
+          </p>
+          <p>
+            Docker is a tool for running applications and services in small, light-weight "containers" which do not interfere with your local machine's installed software or configuration. This means you don't have to worry about
+            configuring or setting up complicated development tools such as web servers and databases on your local machine. To get started, you only need to install Docker Desktop.
+          </p>
+          <p>
+            Laravel Sail is a light-weight command-line interface for interacting with Laravel's default Docker configuration. Sail provides a great starting point for building a Laravel application using PHP, MySQL, and Redis without
+            requiring prior Docker experience.
+          </p>
+          <div class="additional-explanation">
+            <h3>Getting Started On macOs</h3>
+            <p>
+              If you're developing on a Mac and Docker Desktop is already installed, you can use a simple terminal command to create a new Laravel project. For example, to create a new Laravel application in a directory named "example-app",
+              you may run the following command in your terminal:
+              <code>curl -s "https://laravel.build/example-app" | bash</code>
+            </p>
+            <p>
+              Of course, you can change "example-app" in this URL to anything you like - just make sure the application name only contains alpha-numeric characters, dashes, and underscores. The Laravel application's directory will be
+              created within the directory you execute the command from.
+            </p>
+            <p>Sail installation may take several minutes while Sail's application containers are built on your local machine.</p>
+            <p>
+              After the project has been created, you can navigate to the application directory and start Laravel Sail. Laravel Sail provides a simple command-line interface for interacting with Laravel's default Docker configuration:
+              <code>
+                cd example-app <br /><br />
+                ./vendor/bin/sail up
+              </code>
+            </p>
+            <p>Once the application's Docker containers have been started, you can access the application in your web browser at: <code class="inline">http://localhost</code>.</p>
+          </div>
+          <div class="additional-explanation">
+            <h3>Getting Started On Windows</h3>
+            <p>
+              Before we create a new Laravel application on your Windows machine, make sure to install Docker Desktop. Next, you should ensure that Windows Subsystem for Linux 2 (WSL2) is installed and enabled. WSL allows you to run Linux
+              binary executables natively on Windows 10. Information on how to install and enable WSL2 can be found within Microsoft's developer environment documentation.
+            </p>
+            <p>
+              Next, you are ready to create your first Laravel project. Launch Windows Terminal and begin a new terminal session for your WSL2 Linux operating system. Next, you can use a simple terminal command to create a new Laravel
+              project. For example, to create a new Laravel application in a directory named "example-app", you may run the following command in your terminal:
+              <code>curl -s https://laravel.build/example-app | bash</code>
+            </p>
+            <p>
+              Of course, you can change "example-app" in this URL to anything you like - just make sure the application name only contains alpha-numeric characters, dashes, and underscores. The Laravel application's directory will be
+              created within the directory you execute the command from.
+            </p>
+            <p>Sail installation may take several minutes while Sail's application containers are built on your local machine.</p>
+            <p>
+              After the project has been created, you can navigate to the application directory and start Laravel Sail. Laravel Sail provides a simple command-line interface for interacting with Laravel's default Docker configuration:
+              <code>
+                cd example-app <br /><br />
+                ./vendor/bin/sail up
+              </code>
+            </p>
+            <p>Once the application's Docker containers have been started, you can access the application in your web browser at: <code class="inline">http://localhost</code>.</p>
+          </div>
+          <div class="additional-explanation">
+            <h3>Getting Started On Linux</h3>
+            <p>
+              If you're developing on Linux and Docker Compose is already installed, you can use a simple terminal command to create a new Laravel project. For example, to create a new Laravel application in a directory named "example-app",
+              you may run the following command in your terminal:
+              <code>curl -s https://laravel.build/example-app | bash</code>
+            </p>
+            <p>
+              Of course, you can change "example-app" in this URL to anything you like - just make sure the application name only contains alpha-numeric characters, dashes, and underscores. The Laravel application's directory will be
+              created within the directory you execute the command from.
+            </p>
+            <p>Sail installation may take several minutes while Sail's application containers are built on your local machine.</p>
+            <p>
+              After the project has been created, you can navigate to the application directory and start Laravel Sail. Laravel Sail provides a simple command-line interface for interacting with Laravel's default Docker configuration:
+              <code>
+                cd example-app <br /><br />
+                ./vendor/bin/sail up
+              </code>
+            </p>
+            <p>Once the application's Docker containers have been started, you can access the application in your web browser at: <code class="inline">http://localhost</code>.</p>
+          </div>
+          <div class="additional-explanation">
+            <h3>Choosing Your Sail Services</h3>
+            <p>
+              When creating a new Laravel application via Sail, you may use the with query string variable to choose which services should be configured in your new application's docker-compose.yml file. Available services include mysql,
+              pgsql, mariadb, redis, memcached, meilisearch, minio, selenium, and mailpit:
+              <code>curl -s "https://laravel.build/example-app?with=mysql,redis" | bash</code>
+            </p>
+            <p>If you do not specify which services you would like configured, a default stack of mysql, redis, meilisearch, mailpit, and selenium will be configured.</p>
+            <p>
+              You may instruct Sail to install a default Devcontainer by adding the devcontainer parameter to the URL:
+              <code>curl -s "https://laravel.build/example-app?with=mysql,redis&devcontainer" | bash</code>
+            </p>
+          </div>
         </section>
       </main>
     </div>

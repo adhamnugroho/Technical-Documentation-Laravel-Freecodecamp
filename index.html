@@ -177,6 +177,55 @@
             </p>
           </div>
         </section>
+        <section class="main-section" id="initial-configuration">
+          <header>
+            <h2>Initial Configuration</h2>
+          </header>
+          <p>All of the configuration files for the Laravel framework are stored in the config directory. Each option is documented, so feel free to look through the files and get familiar with the options available to you.</p>
+          <p>
+            Laravel needs almost no additional configuration out of the box. You are free to get started developing! However, you may wish to review the config/app.php file and its documentation. It contains several options such as timezone
+            and locale that you may wish to change according to your application.
+          </p>
+          <div class="additional-explanation">
+            <h3>Environment Base Configuration</h3>
+            <p>
+              Since many of Laravel's configuration option values may vary depending on whether your application is running on your local machine or on a production web server, many important configuration values are defined using the .env
+              file that exists at the root of your application.
+            </p>
+            <p>
+              Your .env file should not be committed to your application's source control, since each developer / server using your application could require a different environment configuration. Furthermore, this would be a security risk
+              in the event an intruder gains access to your source control repository, since any sensitive credentials would get exposed.
+            </p>
+          </div>
+          <div class="additional-explanation">
+            <h3>Database And Migration</h3>
+            <p>
+              Now that you have created your Laravel application, you probably want to store some data in a database. By default, your application's .env configuration file specifies that Laravel will be interacting with a MySQL database
+              and will access the database at 127.0.0.1. If you are developing on macOS and need to install MySQL, Postgres, or Redis locally, you may find it convenient to utilize DBngin.
+            </p>
+            <p>
+              YIf you do not want to install MySQL or Postgres on your local machine, you can always use a SQLite database. SQLite is a small, fast, self-contained database engine. To get started, create a SQLite database by creating an
+              empty SQLite file. Typically, this file will exist within the database directory of your Laravel application:
+              <code>touch database/database.sqlite</code>
+            </p>
+            <p>
+              Next, update your .env configuration file to use Laravel's sqlite database driver. You may remove the other database configuration options:
+              <code>
+                DB_CONNECTION=sqlite # [tl! add] <br />
+                DB_CONNECTION=mysql # [tl! remove] <br />
+                DB_HOST=127.0.0.1 # [tl! remove] <br />
+                DB_PORT=3306 # [tl! remove] <br />
+                DB_DATABASE=laravel # [tl! remove] <br />
+                DB_USERNAME=root # [tl! remove] <br />
+                DB_PASSWORD= # [tl! remove]
+              </code>
+            </p>
+            <p>
+              Once you have configured your SQLite database, you may run your application's database migrations, which will create your application's database tables:
+              <code>php artisan migrate</code>
+            </p>
+          </div>
+        </section>
       </main>
     </div>
   </body>

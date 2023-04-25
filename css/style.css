@@ -1,3 +1,102 @@
 /* Import */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
+/* Default style */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  min-width: 290px;
+  background-color: #fff;
+  color: #4d4e53;
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "navbar content";
+}
+
+#navbar {
+  grid-area: navbar;
+  min-width: 300px;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  border-right: 3px solid rgba(0, 22, 22, 0.4);
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar > header {
+  padding: 8% 0;
+  border-bottom: 3px solid rgba(0, 22, 22, 0.4);
+}
+
+.title-documentation {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+#navbar li {
+  padding: 5% 0 4% 5%;
+  border-bottom: 2px solid rgba(0, 22, 22, 0.4);
+}
+
+#main-doc {
+  grid-area: content;
+  width: 100%;
+  padding: 3%;
+}
+
+.main-section {
+  margin: 1% 0;
+  width: 100%;
+}
+
+.main-section header > h2 {
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+.main-section p,
+.main-section .additional-explanation {
+  margin: 2% 0 0 2%;
+}
+
+.additional-explanation h3 {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.additional-explanation ul {
+  width: 100%;
+  margin: 1% 0 0 4%;
+}
+
+.additional-explanation li {
+  list-style: none;
+}
+
+.additional-explanation li h4::before {
+  content: "-";
+  font-size: 1.6em;
+  margin-right: 1%;
+}
+
+.additional-explanation h4 {
+  font-size: 1.1em;
+  text-transform: capitalize;
+}

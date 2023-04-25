@@ -22,6 +22,11 @@ code {
   font-family: "Source Code Pro", monospace;
 }
 
+a {
+  color: #4d4e53;
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
   min-width: 290px;
@@ -36,11 +41,10 @@ code {
 #navbar {
   grid-area: navbar;
   min-width: 300px;
-  width: 100%;
   min-height: 100vh;
   height: 100%;
   border-right: 3px solid rgba(0, 22, 22, 0.4);
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
 }

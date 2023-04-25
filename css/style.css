@@ -1,5 +1,6 @@
 /* Import */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Default style */
 
@@ -15,6 +16,10 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   overflow-x: hidden;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
 }
 
 .container {
@@ -61,8 +66,8 @@ body {
   padding: 3%;
 }
 
-.main-section {
-  margin: 1% 0;
+.main-section:not(:first-of-type) {
+  margin: 3% 0;
   width: 100%;
 }
 
@@ -74,6 +79,20 @@ body {
 .main-section p,
 .main-section .additional-explanation {
   margin: 2% 0 0 2%;
+}
+
+.main-section p code {
+  display: block;
+  background-color: #f1f1f1;
+  padding: 1% 0 1% 1.7%;
+  margin-top: 1.5%;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.main-section p code.inline {
+  display: inline-block;
+  padding: 1%;
 }
 
 .additional-explanation h3 {

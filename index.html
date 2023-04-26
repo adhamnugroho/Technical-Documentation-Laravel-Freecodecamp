@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laravel Documentation - Intalation</title>
+
+    <!-- Vendor css -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome-free-6.4.0-web/css/all.min.css" />
+
     <!-- Css style -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -13,6 +17,11 @@
       <nav id="navbar">
         <header>
           <h1 class="title-documentation">Laravel Documentation</h1>
+          <div class="humberger-menu">
+            <input type="checkbox" id="humberger-toggle" />
+            <i class="fa-solid fa-bars fa-xl" style="color: #000000"></i>
+            <i class="fa-solid fa-bars-staggered fa-xl d-none" style="color: #000000"></i>
+          </div>
         </header>
         <ul>
           <li><a href="#meet-laravel">Meet Laravel</a></li>
@@ -262,6 +271,17 @@
           </div>
         </section>
       </main>
+      <!-- navupElement -->
+      <div id="nav-up">
+        <i class="fa-solid fa-chevron-up fa-xl" style="color: #000000"></i>
+      </div>
     </div>
+
+    <!-- vendor - js -->
+    <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="assets/plugins/fontawesome-free-6.4.0-web/js/all.min.js"></script>
+
+    <!-- external - js -->
+    <script src="js/main.js"></script>
   </body>
 </html>

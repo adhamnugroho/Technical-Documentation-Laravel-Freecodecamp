@@ -42,11 +42,11 @@ a {
   grid-area: navbar;
   min-width: 300px;
   min-height: 100vh;
-  height: 100%;
   border-right: 3px solid rgba(0, 22, 22, 0.4);
   position: fixed;
   top: 0;
   left: 0;
+  background-color: #fff;
 }
 
 #navbar > header {
@@ -62,6 +62,10 @@ a {
 #navbar li {
   padding: 5% 0 4% 5%;
   border-bottom: 2px solid rgba(0, 22, 22, 0.4);
+}
+
+#navbar .humberger-menu {
+  display: none;
 }
 
 #main-doc {
@@ -119,7 +123,180 @@ a {
   text-transform: capitalize;
 }
 
+.main-section > header h2.main-section-selected {
+  font-weight: 800;
+}
+
 .additional-explanation h3 {
   font-size: 1.4em;
   font-weight: 500;
+}
+
+.d-none {
+  display: none;
+}
+
+div.nav-up {
+  display: none;
+}
+
+/* Responsive breakpoints */
+@media screen and (max-width: 1366px) {
+  .container {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .container {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "navbar"
+      "content";
+
+    grid-template-columns: 5fr;
+    position: relative;
+  }
+
+  #navbar {
+    width: 100%;
+    min-height: 0vh;
+    /* position: static; */
+  }
+
+  #navbar > header {
+    padding: 1% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title-documentation {
+    text-align: left;
+    margin-left: 2%;
+  }
+
+  #navbar li {
+    padding: 1% 0 1% 2%;
+  }
+
+  #navbar .humberger-menu {
+    display: inline-block;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .humberger-menu > input {
+    width: 100%;
+    height: 2.4em;
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+    cursor: pointer;
+  }
+
+  #main-doc {
+    padding-top: 8%;
+  }
+
+  #main-doc[class*="pt-40"] {
+    padding-top: 40%;
+  }
+
+  #nav-up {
+    display: inline-block;
+    padding: 1.5%;
+    min-height: 20px;
+    background-color: #4a9ee7;
+    position: fixed;
+    top: 85%;
+    left: 92%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  #main-doc {
+    padding-top: 12%;
+  }
+
+  .main-section header > h2 {
+    font-size: 1.4em;
+  }
+
+  .main-section p,
+  .main-section .additional-explanation {
+    margin: 3% 0 0 2%;
+  }
+
+  .main-section p code {
+    font-size: 0.8em;
+  }
+
+  .main-section li h4::before {
+    font-size: 1.4em;
+  }
+
+  .main-section h4 {
+    font-size: 0.95em;
+  }
+
+  .additional-explanation h3 {
+    font-size: 1.25em;
+  }
+
+  #nav-up {
+    left: 90%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #main-doc {
+    padding-top: 17%;
+  }
+
+  .main-section header > h2 {
+    font-size: 1.3em;
+    padding: 2% 0 2% 2%;
+  }
+
+  .main-section p {
+    font-size: 0.8em;
+    padding: 1% 2% 1% 1.7%;
+  }
+
+  .main-section p code {
+    font-size: 0.8em;
+  }
+
+  .main-section li h4::before {
+    font-size: 1.2em;
+  }
+
+  .main-section h4 {
+    font-size: 0.8em;
+  }
+
+  .additional-explanation h3 {
+    font-size: 1.1em;
+  }
+
+  #nav-up {
+    left: 85%;
+  }
 }
